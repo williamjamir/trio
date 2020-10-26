@@ -82,6 +82,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxcontrib_trio',
     'local_customization',
+    'hoverxref.extension',
 ]
 
 intersphinx_mapping = {
@@ -237,3 +238,8 @@ texinfo_documents = [
      author, 'Trio', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+# -- Options for sphinx-hoverxref -------------------------------------------
+
+hoverxref_auto_ref = True
