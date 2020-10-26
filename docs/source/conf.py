@@ -76,12 +76,14 @@ def setup(app):
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'hoverxref.extension',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.coverage',
     'sphinx.ext.napoleon',
     'sphinxcontrib_trio',
     'local_customization',
+    
 ]
 
 intersphinx_mapping = {
@@ -237,3 +239,17 @@ texinfo_documents = [
      author, 'Trio', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+# -- Options for sphinx-hoverxref -------------------------------------------
+
+hoverxref_auto_ref = True
+hoverxref_domains = ['py']
+hoverxref_role_types = {
+    'ref': 'tooltip',    
+    'exc': 'tooltip',    
+    'class': 'tooltip',    
+    'func': 'tooltip',    
+    'mod': 'tooltip',    
+    
+}
